@@ -4,8 +4,8 @@ cd dist || exit 0;
 if  [ "$TRAVIS" = "true" -a "$TRAVIS_PULL_REQUEST" = "false"  -a "$TRAVIS_BRANCH" = "master" ]
   then
     (
-    cp ../CNAME ./CNAME
-    git init
+     cp ../CNAME ./CNAME
+     git init
      git config user.name "Travis-CI"
      git config user.email "travis@example.org"
      git add .
