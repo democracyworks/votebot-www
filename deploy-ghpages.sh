@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 cd dist || exit 0;
 
 if  [ "$TRAVIS" = "true" -a "$TRAVIS_PULL_REQUEST" = "false"  -a "$TRAVIS_BRANCH" = "master" ]
