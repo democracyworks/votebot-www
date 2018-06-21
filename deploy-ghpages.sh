@@ -2,7 +2,7 @@
 
 set -ex
 
-cd dist || exit 0;
+cd dist || exit 1;
 
 if  [ "$TRAVIS" = "true" -a "$TRAVIS_PULL_REQUEST" = "false"  -a "$TRAVIS_BRANCH" = "master" ]
   then
