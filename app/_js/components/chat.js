@@ -125,6 +125,8 @@ window.components.chat = function (doc, win) {
     // (Currently this is hard to move into Jekyll's _config.yml b/c this file
     // gets concated w/ other JS files in the build dest and there's no Jekyll
     // processing pass. So they are hard-coded for now. Sigh.)
+    // The fix might involve moving to something like
+    // https://github.com/envygeeks/jekyll-assets
     if (isInTest) {
       // get conversation type from querystring
       data['chain'] = queryString.conv || 'vote_1';
