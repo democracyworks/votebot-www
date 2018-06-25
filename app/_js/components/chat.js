@@ -66,11 +66,11 @@ window.components.chat = function (doc, win) {
       message.classList.remove('minimized');
     }, 20);
 
-  }
+  };
 
   var scrollToBottom = function() {
     chatbox.scrollTop = chatbox.scrollHeight;
-  }
+  };
 
   var dots = function() {
     var dots = $c('div');
@@ -91,7 +91,7 @@ window.components.chat = function (doc, win) {
     chatbox.appendChild(dots);
 
     scrollToBottom();
-  }
+  };
 
   var validatePhone = function(num) {
 
@@ -105,7 +105,7 @@ window.components.chat = function (doc, win) {
       return false;
 
     return num;
-  }
+  };
 
   var sendPhoneNumber = function() {
     var data = {
@@ -140,7 +140,7 @@ window.components.chat = function (doc, win) {
     setTimeout(function() {
       if (modal) modal.show('overlay1');
     }, 4000);
-  }
+  };
 
   var showShareForm = function() {
     form.classList.add('hidden');
@@ -152,7 +152,7 @@ window.components.chat = function (doc, win) {
     if (isInMyPage) {
       top.postMessage('show-share-form', 'https://my.hello.vote');
     }
-  }
+  };
 
   var animationTimeouts = [];
 

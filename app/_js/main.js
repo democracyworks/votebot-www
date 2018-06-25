@@ -17,7 +17,7 @@
         }
       }
     }
-  }
+  };
 
   triggerComponents(); // JL NOTE ~ disabled for "beta"
 
@@ -27,7 +27,7 @@
       doc.querySelector('.chat').classList.remove('transparent');
       doc.body.classList.remove('scrolling');
     }, 10);
-  }
+  };
 
   var hideChat = function() {
     doc.querySelector('.chat').classList.add('transparent');
@@ -35,7 +35,7 @@
       doc.querySelector('.chat').classList.add('hidden');
       doc.body.classList.add('scrolling');
     }, 500);
-  }
+  };
 
   var handleGetStarted = function(e) {
     if (getComputedStyle(document.querySelector('.chat')).position == 'fixed') {
@@ -43,7 +43,7 @@
     } else {
       smoothScroll(0);
     }
-  }
+  };
 
   var onDomContentLoaded =function() {
 
@@ -63,7 +63,7 @@
       if (e.newURL.slice(-1) == '#') {
         handleGetStarted();
       }
-    }
+    };
 
     initModal();
 
@@ -127,7 +127,7 @@
       e.preventDefault();
       modal.hide('overlay1');
     });
-  }
+  };
 
   var isReady = document.readyState;
 
