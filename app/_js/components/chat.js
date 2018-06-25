@@ -130,9 +130,9 @@ window.components.chat = function (doc, win) {
     if (isInTest) {
       // get conversation type from querystring
       data['chain'] = queryString.conv || 'vote_1';
-      submission.open('POST', 'http://api.dev.hellovote.democracy.works', true);
+      submission.open('POST', 'http://api.dev.hellovote.democracy.works/conversations/', true);
     } else {
-      submission.open('POST', 'http://api.dev.hellovote.democracy.works', true);
+      submission.open('POST', 'http://api.dev.hellovote.democracy.works/conversations/', true);
     }
     submission.setRequestHeader("Content-Type", "application/json");
     submission.send(JSON.stringify(data));
