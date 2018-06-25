@@ -83,6 +83,6 @@ collections:
 
 exclude: ['img']
 keep_files: ['img', 'js', 'css']
-gems:
+plugins:
   - jekyll-redirect-from
 markdown: kramdown
