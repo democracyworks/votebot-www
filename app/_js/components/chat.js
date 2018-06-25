@@ -121,12 +121,16 @@ window.components.chat = function (doc, win) {
     console.log('sending', data);
 
     var submission = new XMLHttpRequest();
+    // TODO: Move the API URLs into some kind of config
+    // (Currently this is hard to move into Jekyll's _config.yml b/c this file
+    // gets concated w/ other JS files in the build dest and there's no Jekyll
+    // processing pass. So they are hard-coded for now. Sigh.)
     if (isInTest) {
       // get conversation type from querystring
       data['chain'] = queryString.conv || 'vote_1';
-      submission.open('POST', 'https://votebot-api-staging.herokuapp.com/conversations/', true);
+      submission.open('POST', 'http://api.dev.hellovote.democracy.works', true);
     } else {
-      submission.open('POST', 'https://votebot-api.herokuapp.com/conversations/', true);
+      submission.open('POST', 'http://api.dev.hellovote.democracy.works', true);
     }
     submission.setRequestHeader("Content-Type", "application/json");
     submission.send(JSON.stringify(data));
