@@ -1,17 +1,17 @@
 {
-  "name": "fftf-campaign-boostrap",
+  "name": "votebot-www",
   "version": "0.0.0",
   "license": "GPL-3.0",
-  "description": "A quick-start microsite generator for Fight for the Future campaigns.",
+  "description": "HelloVote front-end website",
   "author": [
     {
-      "name": "Aki Rose",
-      "email": "aki@fightforthefuture.org",
-      "url": "https://github.com/gesa/"
+      "name": "Fight For The Future and Democracy Works",
+      "email": "dev@democracy.works",
+      "url": "https://democracy.works/"
     }
   ],
-  "private": "true",
-  "repository": "gesa/fftf-campaign-boilerplate",
+  "private": "false",
+  "repository": "democracyworks/votebot-www",
   "scripts": {
     "preinstall": "gem install bundler",
     "postinstall": "bundle",
