@@ -22,9 +22,10 @@ module.exports = function (grunt) {
       }
     },
 
-    execute: {
+    run: {
       sync_petition_code: {
-        src: ['<%= site.scripts %>/sync_petition_code.js']
+        cmd: 'node',
+        args: ['<%= site.scripts %>/sync_petition_code.js']
       }
     },
 
@@ -210,7 +211,7 @@ module.exports = function (grunt) {
 
     concurrent: {
       external_scripts: [
-        'execute:sync_petition_code'
+        'run:sync_petition_code'
       ],
       tasks: [
         'copy:server',
