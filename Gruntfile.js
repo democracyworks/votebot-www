@@ -167,12 +167,12 @@ module.exports = function (grunt) {
               '<%= site.app %>/_js/LICENSE',
               '<%= site.app %>/_js/lib/util.js',
               '<%= site.app %>/_js/components/**/*.js',
+              '<%= site.dist %>/js/components/**/*.js',
               '<%= site.app %>/_js/callbacks/**/*.js',
               '<%= site.app %>/_js/controllers/**/*.js',
               '<%= site.app %>/_js/models/**/*.js',
               '<%= site.app %>/_js/views/**/*.js',
-              '<%= site.app %>/_js/main.js',
-              '<%= site.dist %>/js/components/**/*.js'
+              '<%= site.app %>/_js/main.js'
             ],
             dest: '<%= site.dist %>/js/core.js'
           },
