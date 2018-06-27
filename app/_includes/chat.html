@@ -35,8 +35,11 @@
   </div>
 </div>
 <script type="text/javascript">
-window.speechBubbles = [ {% for string in page.bubbles %}
-  '{{ string | replace: "'", "\\'" }}',{% endfor %}
+window.speechBubbles = [ {% for bubble in page.bubbles %}
+  {% if bubble[0] != "facebook" or site.facebook_messenger %}
+  '{{ bubble[1] | replace: "'", "\\'" }}',
+  {% endif %}
+  {% endfor %}
 ];
 {% if page.partner and page.partner != 'fftf' %}
 window.partner = {

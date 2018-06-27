@@ -106,10 +106,11 @@ layout: none
   </div>
 </div>
 <script type="text/javascript">
-window.speechBubbles = [ 
+window.speechBubbles = [
   'Hi! I\'m HelloVote!',
   'I can help you register to vote, remember to vote, and remind your friends to vote too.',
-  'Try me out! Enter your phone number to start<span class="mobileOnly">, or <a href="https://m.me/hellovote">chat on Facebook Messenger</a></span>.',
+  'Try me out! Enter your phone number to start<span class="mobileOnly">',
+  '{% if site.facebook_messenger %}, or <a href="https://m.me/hellovote">chat on Facebook Messenger</a></span>{% endif %}.',
 ];
 
 </script>

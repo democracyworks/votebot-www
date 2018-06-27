@@ -1,3 +1,5 @@
+---
+---
 <section data-track-content>
   <h1 id="what-is-hellovote" data-content-name="what-is-hello-vote">¿Que es HelloVote?</h1>
   <p>
@@ -8,7 +10,9 @@
 
   <p>
     <a href="#" class="button get-started" data-content-name="faq-get-started" data-track-content>Empieza ahora</a>
+    {% if site.facebook_messenger %}
     <a href="https://m.me/hellovote" class="button facebook-messenger" data-content-name="faq-facebook-messenger" data-track-content>Empieza por Facebook</a>
+    {% endif %}
   </p>
 </section>
 
@@ -18,7 +22,7 @@
     <div class="wrapper"><iframe src="https://www.youtube.com/embed/iIRMXnIRwIM?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe></div>
   </div>
   <p>
-    HelloVote le hara una serie de preguntas por mensaje de texto o Facebook Messenger, para ayudarle a registrarse para votar. En varios estados, sus respuestas se someten directamente a los formularios en línea del estado, por lo cual no hay formas de papel para llenar. (Ningún otro servicio hace que sea tan fácil y rápido.) En otros estados, se le enviará un formulario rellenado por correo electrónico o - si usted no tiene una impresora - por correo. Incluimos un sobre sellado, y sólo tiene que firmar y enviarlo por correo para completar su registro.
+    HelloVote le hara una serie de preguntas por mensaje de texto{% if site.facebook_messenger %} o Facebook Messenger{% endif %} para ayudarle a registrarse para votar. En varios estados, sus respuestas se someten directamente a los formularios en línea del estado, por lo cual no hay formas de papel para llenar. (Ningún otro servicio hace que sea tan fácil y rápido.) En otros estados, se le enviará un formulario rellenado por correo electrónico o - si usted no tiene una impresora - por correo. Incluimos un sobre sellado, y sólo tiene que firmar y enviarlo por correo para completar su registro.
   </p>
   <p>
     También proporcionamos enlaces al sistema de registro en línea de su estado, si tienen uno. (Algunos estados tienen páginas web que no son compatibles con aparatos móviles, así que en esos casos, puede ser más sencillo enviarlo por correo.)

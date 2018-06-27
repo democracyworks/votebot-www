@@ -1,3 +1,5 @@
+---
+---
 <section data-track-content>
   <h1 id="what-is-hellovote" data-content-name="what-is-hello-vote">What is HelloVote?</h1>
   <p>
@@ -9,7 +11,9 @@
 
   <p>
     <a href="#" class="button get-started" data-content-name="faq-get-started" data-track-content>Get started now</a>
+    {% if site.facebook_messenger %}
     <a href="https://m.me/hellovote" class="button facebook-messenger" data-content-name="faq-facebook-messenger" data-track-content>Start on Facebook Messenger</a>
+    {% endif %}
   </p>
 </section>
 
@@ -19,7 +23,7 @@
     <div class="wrapper"><iframe src="https://www.youtube.com/embed/iIRMXnIRwIM?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe></div>
   </div>
   <p>
-    HelloVote asks you a series of questions by text message or Facebook Messenger, to help you register to vote and give you everything you need to get to the polls.
+    HelloVote asks you a series of questions by text message{% if site.facebook_messenger %} or Facebook Messenger{% endif %} to help you register to vote and give you everything you need to get to the polls.
     In several states, your answers submit directly to state online forms for voter registration, so there are no paper forms to fill out! (No other service makes it this fast and easy.)
     In other states, we send you a pre-filled form by email or - if you don't have a printer - by mail. We include a stamped envelope, so to complete your registration you just have to sign and mail it.
   </p>

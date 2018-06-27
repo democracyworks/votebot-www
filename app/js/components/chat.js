@@ -1,3 +1,6 @@
+---
+---
+
 window.components = window.components || {};
 window.components.chat = function (doc, win) {
   /**
@@ -121,18 +124,12 @@ window.components.chat = function (doc, win) {
     console.log('sending', data);
 
     var submission = new XMLHttpRequest();
-    // TODO: Move the API URLs into some kind of config
-    // (Currently this is hard to move into Jekyll's _config.yml b/c this file
-    // gets concated w/ other JS files in the build dest and there's no Jekyll
-    // processing pass. So they are hard-coded for now. Sigh.)
-    // The fix might involve moving to something like
-    // https://github.com/envygeeks/jekyll-assets
     if (isInTest) {
       // get conversation type from querystring
       data['chain'] = queryString.conv || 'vote_1';
-      submission.open('POST', 'http://api.dev.hellovote.democracy.works/conversations/', true);
+      submission.open('POST', '{{ site.votebot_api }}/conversations/', true);
     } else {
-      submission.open('POST', 'http://api.dev.hellovote.democracy.works/conversations/', true);
+      submission.open('POST', '{{ site.votebot_api }}/conversations/', true);
     }
     submission.setRequestHeader("Content-Type", "application/json");
     submission.send(JSON.stringify(data));
@@ -182,7 +179,8 @@ window.components.chat = function (doc, win) {
     if (isInSafeMode) {
       messages = messages.concat([
         'I can help you register to vote, remember to vote, and remind your friends to vote too.',
-        'Try me out! Enter your phone number to start<span class="mobileOnly">, or <a href="https://m.me/hellovote">chat on Facebook Messenger</a></span>.',
+        'Try me out! Enter your phone number to start<span class="mobileOnly">',
+        '{% if site.facebook_messenger %}, or <a href="https://m.me/hellovote">chat on Facebook Messenger</a></span>{% endif %}.'
       ]);
     }
 
