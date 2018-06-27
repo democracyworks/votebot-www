@@ -142,14 +142,15 @@ module.exports = function (grunt) {
       javascript: {
         files: [
           '<%= site.app %>/_js/**/*.js',
-          '<%= site.app %>/js/*.js'
+          '<%= site.app %>/js/*.js',
+          '<%= site.dist %>/js/components/**/*.js'
         ],
         tasks: ['concat']
       },
       jekyll: {
         files: [
           '_*.*',
-          '<%= site.app %>/**/*.{xml,html,yml,md,mkd,markdown,txt,csv}'
+          '<%= site.app %>/**/*.{xml,html,yml,md,mkd,markdown,txt,csv,js}'
         ],
         tasks: ['jekyll:server']
       }
